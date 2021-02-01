@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import { Button } from '../components'
 
 const Home: React.FC = () => {
   return (
@@ -19,6 +20,9 @@ const Home: React.FC = () => {
       <Link href="/generator">
         <a>Generator</a>
       </Link>
+      <div style={{ width: '100px' }}>
+        <Button.Flat label="Hello" />
+      </div>
     </div>
   )
 }

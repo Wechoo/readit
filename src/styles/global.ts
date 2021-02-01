@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: 'FiraSans', system-ui;
-    color: ${({ theme }) => theme.colors.primary};
     min-height: 100vh;
   }
 `
