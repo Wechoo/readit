@@ -7,10 +7,18 @@ const Home: React.FC = () => {
     <div>
       <Head>
         <title>Read.it</title>
+        <link
+          rel="preload"
+          href="/fonts/FiraSans-Regular.ttf"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
 
       <main>Hello Read.it</main>
-      <Link href="/generator"><a>Generator</a></Link>
+      <Link href="/generator">
+        <a>Generator</a>
+      </Link>
     </div>
   )
 }
