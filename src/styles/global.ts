@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'FiraSans', system-ui;
     min-height: 100vh;
+    color: ${({ theme }) => theme.colors.primary}
   }
 `
 
