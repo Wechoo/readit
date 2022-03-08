@@ -1,9 +1,27 @@
 version: 2
 
-updates:  
-  - package-ecosystem: "npm"    
-    directory: "/"      
-    schedule:      
-      interval: "daily"      
-      time: "08:00"      
+registries:
+  npm-wechoo:
+    type: npm-registry
+    url: https://yourjfrogurl.jfrog.io/company/api/npm/npm/
+    username: ${{secrets.USERNAME_SECRET}}
+    password: ${{secrets.PASSWORD_SECRET}}
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    registries:
+      - npm-wechoo
+    schedule:
+      interval: "daily"
+      time: "08:00"
       timezone: "America/Sao_Paulo"
+    # allow 2 version updates for each dependency
+    open-pull-requests-limit: 2
+    commit-message:
+      # Prefix all commit messages with "chore:"
+      prefix: "chore:"
+    target-branch: "master"
+    allow:
+      # Allow updates only for @dependecy/mobile-button
+      - dependency-name: "@dependecy/mobile-button"
