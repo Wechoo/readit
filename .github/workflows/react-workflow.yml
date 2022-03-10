@@ -24,7 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Echo env
-        run: echo "hello ${{env.NPM}} $NPM"
+        run: echo "hello ${{secrets.NPM}} $NPM"
 
       - name: Install dependencies
         run: npm install
