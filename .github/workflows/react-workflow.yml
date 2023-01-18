@@ -9,3 +9,5 @@ on:
 jobs:
   call-workflow:
     uses: Wechoo/workflow-templates/.github/workflows/template-workflow.yml@master
+    with:
+      test: false
