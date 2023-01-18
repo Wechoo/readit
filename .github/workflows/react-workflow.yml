@@ -6,7 +6,18 @@ on:
   pull_request:
     branches: [master]
 
-jobs:
-  call-workflow:
-    uses: Wechoo/workflow-templates/.github/workflows/template-workflow.yml@master
+#jobs:
+#  call-workflow:
+#    uses: Wechoo/workflow-templates/.github/workflows/template-workflow.yml@master
     
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Build React app
+      uses: wechoo/wechoo-react-action@v1.0.1
+      with:
+        example-input: 'Hello World'
