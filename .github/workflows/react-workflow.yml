@@ -19,4 +19,4 @@ jobs:
       name: Production
     steps:
       - name: deploy
-        run: echo approve
+        run: echo approveProd
