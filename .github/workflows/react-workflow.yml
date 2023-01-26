@@ -11,3 +11,12 @@ jobs:
     uses: Wechoo/workflow-templates/.github/workflows/template-workflow.yml@master
     with:
       test: false
+      
+  DeployProd:
+    name: xpto
+    runs-on: ubuntu-latest
+    environment:
+      name: Production
+    steps:
+      - name: deploy
+        run: echo approve
