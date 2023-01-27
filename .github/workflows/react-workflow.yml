@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo 1
-        run: echo "$GITHUB_REF##*/"
+        run: echo "${GITHUB_REF##*/}"
       - name: echo 2
         run: echo "${GITHUB_REF#refs/*/}"
       - name: echo 3
