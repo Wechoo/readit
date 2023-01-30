@@ -11,24 +11,11 @@ jobs:
   #   uses: Wechoo/workflow-templates/.github/workflows/template-workflow.yml@master
   #   with:
   #     test: false
-
-
-  xpto:
-    runs-on: ubuntu-latest
-    steps:
-      - name: echo 1
-        run: echo "${GITHUB_REF##*/}"
-      - name: echo 2
-        run: echo "${GITHUB_REF#refs/*/}"
-      - name: echo 3
-        run: echo "$GITHUB_REF"
       
-  # DeployProd:
-  #   name: xpto
-  #   needs: [call-workflow]
-  #   runs-on: ubuntu-latest
-  #   environment:
-  #     name: Production
-  #   steps:
-  #     - name: deploy
-  #       run: echo approveProd
+  DeployProd:
+    name: xpto
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      - name: Run echo
+        run: echo 'Hello World'
